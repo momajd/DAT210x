@@ -2,16 +2,15 @@ import pandas as pd
 import numpy as np
 
 
-#
-# TODO:
 # Load up the dataset, setting correct header labels.
-#
-# .. your code here ..
+
+column_names = ['education', 'age', 'capital-gain', 'race', 'capital-loss',
+    'hours-per-week', 'sex', 'classification']
+
+df = pd.read_csv('Datasets/census.data', names = column_names, na_values = "?")
 
 
 
-#
-# TODO:
 # Use basic pandas commands to look through the dataset... get a
 # feel for it before proceeding! Do the data-types of each column
 # reflect the values you see when you look through the data using
@@ -22,13 +21,9 @@ import numpy as np
 # values of each column and identify the rogue values. If these
 # should be represented as nans, you can convert them using
 # na_values when loading the dataframe.
-#
-# .. your code here ..
 
 
 
-#
-# TODO:
 # Look through your data and identify any potential categorical
 # features. Ensure you properly encode any ordinal and nominal
 # types using the methods discussed in the chapter.
@@ -38,14 +33,11 @@ import numpy as np
 # make more sense to have a numeric type or a series of categories
 # for these somewhat ambigious features?
 #
-# .. your code here ..
+
+# Ordinal columns would be 'education' and 'classification'
 
 
 
-#
-# TODO:
+
 # Print out your dataframe
-#
-# .. your code here ..
-
-
+print(df)
